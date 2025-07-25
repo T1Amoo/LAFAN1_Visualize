@@ -50,12 +50,12 @@ class MotionPlayer:
         if self.args.robot_type == 'g1':
             urdf_path = "robot_description/g1/g1_29dof_rev_1_0.urdf"
             self.robot = pin.RobotWrapper.BuildFromURDF('robot_description/g1/g1_29dof_rev_1_0.urdf', 'robot_description/g1', pin.JointModelFreeFlyer())
-            self.Tpose = np.array([0,0,0.785,0,0,0,1,
-                                    -0.15,0,0,0.3,-0.15,0,
-                                    -0.15,0,0,0.3,-0.15,0,
-                                    0,0,0,
-                                    0, 1.57,0,1.57,0,0,0,
-                                    0,-1.57,0,1.57,0,0,0]).astype(np.float32)
+            self.Tpose = np.array([ 0, 0, 0.785, 0, 0, 0, 1,
+                                    -0.2, 0.0, 0.0, 0.42, -0.23, 0.0,
+                                    -0.2, 0.0, 0.0, 0.42, -0.23, 0.0,
+                                    0.0, 0.0, 0.0,
+                                    0.35, 0.18, 0.0, 0.87, 0.0, 0.0, 0.0,
+                                    0.35, -0.18, 0.0, 0.87, 0.0, 0.0, 0.0]).astype(np.float32)
         elif self.args.robot_type == 'h1_2':
             urdf_path = "robot_description/h1_2/h1_2_wo_hand.urdf"
         elif self.args.robot_type == 'h1':
